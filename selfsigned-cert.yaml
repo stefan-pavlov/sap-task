@@ -1,0 +1,18 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: nginx-selfsigned-cert
+  namespace: default
+spec:
+  secretName: nginx-selfsigned-tls
+  duration: 8760h 
+  renewBefore: 360h
+  subject:
+    organizations:
+      - SelfSigned
+  commonName: stefan-pavlov.local
+  dnsNames:
+    - stefan-pavlov.local
+  issuerRef:
+    name: selfsigned-cluster-issuer
+    kind: ClusterIssuer
