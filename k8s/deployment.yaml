@@ -12,6 +12,7 @@ spec:
       labels:
         app: nginx
     spec:
+      automountServiceAccountToken: false
       containers:
       - name: nginx
         image: stefanpavlov1/nginx-hello:latest
