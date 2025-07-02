@@ -81,3 +81,6 @@ Push to the main branch and Actions will:
 
 Build and push the Docker image
 Deploy to Minikube
+
+#test the hpa
+deploy a pod and execute wget command to the nginx service to simulate load
